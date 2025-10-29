@@ -87,12 +87,13 @@ html {
   left: 8vw;
   max-width: 24vw;
   font-size: calc(var(--sizeindex) * 0.8);
-  transition: opacity var(--transition);
+  transition: opacity var(--transition), transform var(--transition);
 }
 
 .description p {
   opacity: 0.9;
   transition: transform var(--transition);
+  transition-duration: 3s;
 }
 
 .logo {
@@ -106,4 +107,9 @@ html {
 
 .description.hidden {
   opacity: 0;
+  transform: translateY(5vh);
+}
+
+.description.hidden p {
+  transform: translateY(2vh);
 }
